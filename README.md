@@ -1,2 +1,3 @@
 # SA
-Numerical examples for system aliasing
+Numerical examples and code for 'A Sampling Theorem for Exact Identification of Continuous-time Nonlinear Dynamical systems'.
+
