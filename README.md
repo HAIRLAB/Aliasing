@@ -2,4 +2,4 @@
 ## SA consists of following subfolders
 -**Linear**:
 -**Fixed point**:
--Limit cycle:
+-**Limit cycle**:
