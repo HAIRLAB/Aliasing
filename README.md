@@ -1,4 +1,7 @@
 # Numerical examples and code for 'A Sampling Theorem for Exact Identification of Continuous-time Nonlinear Dynamical systems'.
+## Result
+Simulation.pdf
+
 ## SA consists of following subfolders
 - **Linear**: The extendable rod and the identification of linear systems with growing sampling period
 - **Fixed point**: The identification of nonlinear system with fixed point with growing sampling period
