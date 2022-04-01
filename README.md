@@ -4,4 +4,6 @@
 - **Fixed point**: The identification of nonlinear system with fixed point with growing sampling period
 - **Limit cycle**: The identification of nonlinear system with limit cycle with growing sampling period
 
-## First collect data for specific dynamical systems.
+## The codes for collecting data.
+- LSdatacollect
+- 
