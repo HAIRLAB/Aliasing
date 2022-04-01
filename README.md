@@ -5,5 +5,11 @@
 - **Limit cycle**: The identification of nonlinear system with limit cycle with growing sampling period
 
 ## The codes for collecting data.
-- LSdatacollect
-- 
+- LSdatacollect.m
+
+
+## Functions ##
+- build_basis.m
+- make_input_fd.m
+- make_output_fd.m
+
