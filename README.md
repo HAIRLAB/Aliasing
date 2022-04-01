@@ -6,6 +6,8 @@
 
 ## The codes for collecting data.
 - LSdatacollect.m
+- fixed_point_collect.m
+- stable_limit_cycle_collect.m
 
 
 ## Functions ##
