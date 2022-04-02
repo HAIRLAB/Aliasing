@@ -27,7 +27,7 @@ int_err = zeros(NdeltaT, n);
 %% **********************************************************
 
 for polyorder = [7,10,13]
-for h = 1:NdeltaT %separate by h 
+for h = 1:NdeltaT %If you just want the picture of state prediction T=0.5,1.1 or 2.8, change it to h=[50,110,280].
     fprintf('Starting sampling, period = %1.2f s \n', T_sample(h)*deltaT);
     Xtmp = [];
     Ytmp = [];
