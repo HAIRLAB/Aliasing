@@ -6,7 +6,7 @@ rng(2141444)
 %%%                   \dot{x1} = -3x2-mu*x1(x1^2+x2^2-1); \dot{x2} = 3x1-mu*x2(x1^2+x2^2-1)      %%%
 
 %% ************************** Data ******************************
-mu=3; ii = 1;
+mu=3; 
 load('stable_limitcycle_mu=3_initial_1p5.mat','X','Y','MaxT','Nsim_traj','Ntraj','deltaT');
 n = 2; %number of states 
 
@@ -52,12 +52,11 @@ int_err = zeros(NdeltaT, n);
 %% **********************************************************
 
 
-for polyorder = [7,10,13]%Npolyorder
-for h = [50,110,280]%1:NdeltaT %separate by h 
+for polyorder = [7,10,13]
+for h = 1:NdeltaT% If you just want the picture of state prediction T=0.5,1.1 or 2.8, change it to h=[50,110,280].
     fprintf('Starting sampling, period = %1.2f s \n', T_sample(h)*deltaT);
     Xtmp = [];
     Ytmp = [];
-    %Nh = Nsim_traj*h;
     for i = 1:Nsim_traj
         Xtmp = [Xtmp X(:,Ntraj*h*(i-1)+1:Ntraj*h*(i-1)+Ntraj)];
         Ytmp = [Ytmp Y(:,Ntraj*h*i-999:Ntraj*i*h)];
