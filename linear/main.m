@@ -4,7 +4,7 @@ rng(2141444)
 addpath('./figure');
 
 
-%%%                     \dot{x1} = a.*x(1,:) + omega.*x(2,:);\dot{x2} =a.*x(2,:) - omega.*x(1,:);         %%%
+%%%   \dot{x1} = a.*x(1,:) + omega.*x(2,:);\dot{x2} =a.*x(2,:) - omega.*x(1,:);         %%%
 
 %% ************************** Data ******************************
 load('LSdat_omega=3_a=posi01.mat','X','Y','MaxT','Nsim_traj','Ntraj','deltaT');
@@ -23,8 +23,6 @@ states_name = {'x1','x2'};
 f_u =  @(t,x)([ a.*x(1,:) + omega.*x(2,:); a.*x(2,:) - omega.*x(1,:)] );
 vec_f1 = @(x1,x2)([ a.*x1 + omega.*x2] );
 vec_f2 = @(x1,x2)([ -omega.*x1 + a.*x2 ] ); 
-
-%f_u =  @(t,x)([ x(1,:) + x(2,:); x(2,:) - x(1,:)] );
 
 %Runge-Kutta 4
 k1 = @(t,x) (  f_u(t,x) );
@@ -57,7 +55,7 @@ mea = zeros(NdeltaT,1);
 NRMSE = zeros(NdeltaT,Npolyorder);
 %imag_max = zeros(NdeltaT,1);
 
-for polyorder = Npolyorder
+polyorder = Npolyorder
 for h = 1:NdeltaT %If you just want the picture of state prediction T=0.5,1.1 or 2.8, change it to h=[50,110,280].
     fprintf('Starting sampling, period = %1.2f s \n', T_sample(h)*deltaT);
     Xtmp = [];
@@ -220,11 +218,8 @@ xlabel('$x_1$','interpreter','latex');
 ylabel('$x_2$', 'interpreter', 'latex');
 set(gca,'fontsize',30);
 
-
-%saveas(gcf, ['a=0p1_rmse_',num2str(NRMSE(h,polyorder)),'_T_',num2str(sampleTs),'.fig'])
 end
 
-end
 end
 %% ****************************  Plots  ***********************************
 lw = 3;
